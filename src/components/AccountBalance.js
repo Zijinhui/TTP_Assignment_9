@@ -1,13 +1,11 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-class AccountBalance extends Component {
-    render() {
-        return (
-            <div>
-                Balance: {this.props.accountBalance}
-            </div>
-        )
-    }
+function AccountBalance(props) {
+    return (
+        <div>
+            Balance: {props.accountBalance}
+        </div>
+    ) 
 }
 
 export default AccountBalance

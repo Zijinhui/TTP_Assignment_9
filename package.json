@@ -2,7 +2,7 @@
   "name": "bank-of-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Zijinhui.github.io/TTP_Assignment_9/",
+  
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -41,3 +41,5 @@
     ]
   }
 }
+
+
