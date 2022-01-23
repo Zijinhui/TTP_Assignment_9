@@ -9,15 +9,15 @@ return (
           
 
             <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/AccountBalance">AccountBalance</Link>
-                    </li>
+                <ul>             
                     <li>
                         <Link to="/UserProfile">UserProfile</Link>
+                    </li>
+                    <li>
+                        <Link to="/LogIn">LogIn</Link>
+                    </li>
+                    <li>
+                        <Link to="/Debits">Debits</Link>
                     </li>
                 </ul>
                 

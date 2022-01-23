@@ -1,8 +1,19 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function UserProfile(props) {
     return (
         <div>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/AccountBalance">AccountBalance</Link>
+                    </li>
+                </ul>
+            </nav>
             <h1>User Profile</h1>
 
             <div>Username: {props.userName}</div>

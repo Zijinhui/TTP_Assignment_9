@@ -1,10 +1,11 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function AccountBalance(props) {
     return (
-        <div>
-            Balance: {props.accountBalance}
-        </div>
+           <div className="balance">
+               Balance: {props.accountBalance}
+           </div>           
     ) 
 }
 
