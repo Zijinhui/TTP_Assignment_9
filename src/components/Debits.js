@@ -25,8 +25,8 @@ function Debits(props) {
     const display = transactions.sort((a, b) => new Date(b.date) - new Date(a.date)).map((transaction, index) => {
         return(
             <div key={index} className="record">
-                <span className="description">{transaction.description}</span>
-                <span>${transaction.amount}</span>
+                <span className="description-record">{transaction.description}</span>
+                <span className="amount-record">${transaction.amount}</span>
                 <p>{transaction.date}</p>
             </div>
         
@@ -64,7 +64,10 @@ function Debits(props) {
 
             </nav>
             <h1>Debits</h1>
-            <AccountBalance accountBalance={props.accountBalance} />
+            <div className="currentBalance">
+                <AccountBalance accountBalance={props.accountBalance} />
+            </div>
+            
 
             <div className="inputDebit">
                 <form onSubmit={handleSubmit}>
@@ -82,7 +85,7 @@ function Debits(props) {
 
             <div className="transactions-table">
                 <h3>Transactions</h3>
-                <div>
+                <div className="records">
                     {display}
                 </div>
             
