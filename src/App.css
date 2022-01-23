@@ -52,6 +52,9 @@ h1 {
 }
 
 .logIn {
+  margin: 190px;
+  display: block;
+  line-height: 3.5;
   text-align: center;
 }
 
@@ -165,5 +168,10 @@ button:hover {
 button:active {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+/*LogIn Page*/
+.password-input {
+  margin-left: 12px;
 }
 

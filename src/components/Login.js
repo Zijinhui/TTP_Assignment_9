@@ -37,9 +37,9 @@ function LogIn(props) {
             <label htmlFor="userName">User Name</label>
             <input type="text" name="userName" onChange={handleChange} value={state.user.userName} />
           </div>
-          <div>
+          <div >
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" />
+            <input type="password" name="password" className="password-input"/>
           </div>
           <button>Log In</button>
         </form>
