@@ -175,3 +175,9 @@ button:active {
   margin-left: 12px;
 }
 
+/*User Profile*/
+.profile-info {
+  text-align: center;
+  font-weight: bold;
+}
+

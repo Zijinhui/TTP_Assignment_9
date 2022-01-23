@@ -32,7 +32,7 @@ function App() {
     setUser({...user,accountBalance: (Math.round(sum * 100)/100).toFixed(2)})
   }
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route exact path="/" element={<Home accountBalance={user.accountBalance}/>} />
           <Route exact path="/AccountBalance" element={<AccountBalance accountBalance={user.accountBalance}/>} />
