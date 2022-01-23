@@ -1,10 +1,9 @@
-import {Link} from 'react-router-dom'
-import {useEffect, useState} from 'react'
-import AccountBalance from './AccountBalance'
 import React from 'react'
+import {useEffect, useState} from 'react'
+import {Link} from 'react-router-dom'
+import AccountBalance from './AccountBalance'
 
-function Debits(props) {
-    //const [balance, setBalance] = useState("")
+function Credits(props) {
     const [transactions, setTransactions] = useState([])
     const [record, setRecord] = useState({
         description: "",
@@ -13,7 +12,7 @@ function Debits(props) {
     })
 
     useEffect(() => {
-        fetch("https://moj-api.herokuapp.com/debits")
+        fetch("https://moj-api.herokuapp.com/credits")
         .then((res) =>res.json())
         .then((data) => setTransactions(data))
         .catch((error) => {
@@ -31,9 +30,6 @@ function Debits(props) {
             </div>
         
     )})
-    //console.log(display)
- 
-
 
     const updateAmount = (e)  => {
         setRecord({...record, amount: e.target.value})
@@ -48,13 +44,12 @@ function Debits(props) {
         //Push a new record into transctions
         setTransactions(transactions =>[...transactions, record])
         // Pass current input amount to upadeBalance() from App.js(Parent)
-        props.updateBalance("-"+record.amount)
+        props.updateBalance(record.amount)
         
     }
 
-
-    return (
-        <div className="Debits">
+    return(
+        <div className="Credits">
             <nav>
                 <ul className="bar">
                     <li>
@@ -64,12 +59,12 @@ function Debits(props) {
                         <Link to="/UserProfile">UserProfile</Link>
                     </li>
                     <li>
-                        <Link to="/Credits">Credits</Link>
+                        <Link to="/Debits">Debits</Link>
                     </li>
                 </ul>
 
             </nav>
-            <h1>Debits</h1>
+            <h1>Credits</h1>
             <div className="currentBalance">
                 <AccountBalance accountBalance={props.accountBalance} />
             </div>
@@ -85,12 +80,12 @@ function Debits(props) {
                         <label >Enter Deacription</label> 
                         <input type="text" name="description" value={record.description} onChange={updateDescription}/>                      
                     </div>
-                    <button>Add Debit</button>
+                    <button>Add Credits</button>
                 </form>
             </div>
 
             <div className="transactions-table">
-                <h3>Debits Transactions</h3>
+                <h3>Credits Transactions</h3>
                 <div className="records">
                     {display}
                 </div>
@@ -99,7 +94,6 @@ function Debits(props) {
             </div>
         </div>
     )
-
 }
 
-export default Debits
+export default Credits

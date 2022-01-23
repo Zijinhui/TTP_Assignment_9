@@ -5,27 +5,30 @@ import AccountBalance from './AccountBalance'
 function Home(props) {
 return (
         <div>
-            {/*<img src="https://letstalkpayments.com/wp-content/uploads/2016/04/Bank.png" alt="bank" />*/}
-          
-
             <nav>
-                <ul>             
+                <ul className="bar"> 
+                    <li className="bar-logIn">
+                        <Link to="/LogIn">LogIn</Link>
+                    </li>            
                     <li>
                         <Link to="/UserProfile">UserProfile</Link>
-                    </li>
-                    <li>
-                        <Link to="/LogIn">LogIn</Link>
-                    </li>
+                    </li> 
                     <li>
                         <Link to="/Debits">Debits</Link>
+                    </li>
+                    <li>
+                        <Link to="/Credits">Credits</Link>
                     </li>
                 </ul>
                 
             </nav>
-            <h1>Bank of React</h1>
-
-            <AccountBalance accountBalance={props.accountBalance} />
-           
+            <div className="main">
+                <h1>Bank of React</h1>
+                <div className="currentBalance">
+                <AccountBalance accountBalance={props.accountBalance} />
+                </div>
+            </div>
+            
         </div>
     )
 }

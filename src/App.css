@@ -1,5 +1,54 @@
-h1 {
+nav {
+  padding: 30px;
+  background-color: black;
   text-align: center;
+}
+.bar{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 20px;
+  display: inline-block;
+ 
+}
+.bar-logIn {
+  margin-left: 0;
+}
+
+.bar li {
+  display: inline-block;
+  margin: 0 20px;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color:paleturquoise
+}
+a:active {
+  color:dodgerblue
+}
+a:link {
+  text-decoration: none;
+}
+
+h1 {
+  color: dodgerblue; 
+  font-family: "Great Vibes", cursive; 
+  font-size: 60px; 
+  line-height: 160px; 
+  font-weight: normal; 
+  margin-bottom: 0px; 
+  margin-top: 10px; 
+  text-align: center; 
+  text-shadow: 0 1px 1px #fff; 
+}
+.main {
+  background-image: url("./components/images/bank.png");
+  background-repeat: no-repeat;
+  background-size: 400px ;
+  background-position: center bottom;
+  height: 650px;
 }
 
 .logIn {
@@ -62,8 +111,8 @@ label {
 }
 
 .currentBalance {
-  width: 150px;
-  height: 40px;
+  width: 180px;
+  height: 45px;
   margin: 60px auto auto auto;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#f8f54d 0 -3px 0 inset;
   box-sizing: border-box;

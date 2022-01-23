@@ -7,6 +7,7 @@ import AccountBalance from './components/AccountBalance'
 import UserProfile from './components/UserProfile'
 import LogIn from './components/Login'
 import Debits from './components/Debits'
+import Credits from './components/Credits'
 
 function App() {
 
@@ -27,7 +28,8 @@ function App() {
   function updateBalance(amount) {
     const sum = Number(user.accountBalance) + Number(amount)
     // If do not add ...user, then only accountBalance of state will be save and rest of state will be removed
-    setUser({...user,accountBalance: sum})
+    console.log(sum)
+    setUser({...user,accountBalance: (Math.round(sum * 100)/100).toFixed(2)})
   }
     return (
       <Router>
@@ -37,6 +39,7 @@ function App() {
           <Route path="/UserProfile" element={<UserProfile userName={user.currentUser.userName} memberSince={user.currentUser.memberSince}/>} />
           <Route path="/LogIn" element={<LogIn user={user.currentUser} mockLogIn={mockLogIn} />} />
           <Route path="/Debits" element={<Debits accountBalance={user.accountBalance} updateBalance={updateBalance}/>}/>
+          <Route path="/Credits" element={<Credits accountBalance={user.accountBalance} updateBalance={updateBalance}/>} />
         </Routes>     
       </Router> 
     )  

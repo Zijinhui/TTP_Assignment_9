@@ -5,7 +5,7 @@ function UserProfile(props) {
     return (
         <div>
             <nav>
-                <ul>
+                <ul className="bar">
                     <li>
                         <Link to="/">Home</Link>
                     </li>
