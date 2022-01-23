@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/TTP_Assignment_9/static/css/main.ce074203.css",
-    "main.js": "/TTP_Assignment_9/static/js/main.9d1a1622.js",
+    "main.js": "/TTP_Assignment_9/static/js/main.6b6d26bb.js",
     "static/media/bank.png": "/TTP_Assignment_9/static/media/bank.51d56fab8818fac94534.png",
     "index.html": "/TTP_Assignment_9/index.html",
     "main.ce074203.css.map": "/TTP_Assignment_9/static/css/main.ce074203.css.map",
-    "main.9d1a1622.js.map": "/TTP_Assignment_9/static/js/main.9d1a1622.js.map"
+    "main.6b6d26bb.js.map": "/TTP_Assignment_9/static/js/main.6b6d26bb.js.map"
   },
   "entrypoints": [
     "static/css/main.ce074203.css",
-    "static/js/main.9d1a1622.js"
+    "static/js/main.6b6d26bb.js"
   ]
 }
