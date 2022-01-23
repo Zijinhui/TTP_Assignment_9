@@ -11,9 +11,6 @@ nav {
   display: inline-block;
  
 }
-.bar-logIn {
-  margin-left: 0;
-}
 
 .bar li {
   display: inline-block;
@@ -36,7 +33,7 @@ h1 {
   color: dodgerblue; 
   font-family: "Great Vibes", cursive; 
   font-size: 60px; 
-  line-height: 160px; 
+  line-height: 150px; 
   font-weight: normal; 
   margin-bottom: 0px; 
   margin-top: 10px; 
@@ -171,6 +168,9 @@ button:active {
 }
 
 /*LogIn Page*/
+.bar-logIn {
+  margin-left: 0;
+}
 .password-input {
   margin-left: 12px;
 }

@@ -32,6 +32,7 @@ function LogIn(props) {
 
     return (
       <div className="logIn">
+        <h1>LogIn Page</h1>
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="userName">User Name</label>
