@@ -35,11 +35,11 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home accountBalance={user.accountBalance}/>} />
-          <Route path="/AccountBalance" element={<AccountBalance accountBalance={user.accountBalance}/>} />
-          <Route path="/UserProfile" element={<UserProfile userName={user.currentUser.userName} memberSince={user.currentUser.memberSince}/>} />
-          <Route path="/LogIn" element={<LogIn user={user.currentUser} mockLogIn={mockLogIn} />} />
-          <Route path="/Debits" element={<Debits accountBalance={user.accountBalance} updateBalance={updateBalance}/>}/>
-          <Route path="/Credits" element={<Credits accountBalance={user.accountBalance} updateBalance={updateBalance}/>} />
+          <Route exact path="/AccountBalance" element={<AccountBalance accountBalance={user.accountBalance}/>} />
+          <Route exact path="/UserProfile" element={<UserProfile userName={user.currentUser.userName} memberSince={user.currentUser.memberSince}/>} />
+          <Route exact path="/LogIn" element={<LogIn user={user.currentUser} mockLogIn={mockLogIn} />} />
+          <Route exact path="/Debits" element={<Debits accountBalance={user.accountBalance} updateBalance={updateBalance}/>}/>
+          <Route exact path="/Credits" element={<Credits accountBalance={user.accountBalance} updateBalance={updateBalance}/>} />
         </Routes>     
       </Router> 
     )  
